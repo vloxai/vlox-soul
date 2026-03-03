@@ -37,7 +37,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col items-center px-4">
+    <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 flex flex-col items-center px-4 transition-colors duration-300">
       <div className="w-full max-w-xl flex flex-col min-h-screen">
         <Header />
         
@@ -52,7 +52,7 @@ function App() {
               <TextInputSection 
                 value={inputText} 
                 onChange={setInputText} 
-                onSubmit={handleTransform}
+                onSubmit={handleTransform} 
                 isLoading={isLoading}
               />
             </div>
@@ -64,11 +64,12 @@ function App() {
             />
           )}
 
-          {/* Helpful Tip Section */}
           {!result && !isLoading && (
-            <div className="bg-indigo-50 border border-indigo-100 p-4 rounded-xl flex gap-3 items-start">
-              <div className="bg-white p-1 rounded-md shadow-sm text-indigo-500 font-bold text-xs uppercase">Tip</div>
-              <p className="text-xs text-indigo-700 leading-normal font-medium">
+            <div className="bg-indigo-50 dark:bg-indigo-950/30 border border-indigo-100 dark:border-indigo-900/50 p-4 rounded-xl flex gap-3 items-start transition-colors duration-300">
+              <div className="bg-white dark:bg-indigo-900 p-1 rounded-md shadow-sm text-indigo-500 dark:text-indigo-300 font-bold text-xs uppercase">
+                Tip
+              </div>
+              <p className="text-xs text-indigo-700 dark:text-indigo-200 leading-normal font-medium">
                 문장이 길고 구체적일수록 페르소나의 특징이 더 잘 살아납니다. 
                 다양한 말투로 당신의 생각을 표현해보세요!
               </p>

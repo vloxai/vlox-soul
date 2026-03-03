@@ -11,16 +11,16 @@ interface Props {
 const PersonaSelector: React.FC<Props> = ({ selectedId, onSelect }) => {
   return (
     <section className="w-full">
-      <h2 className="text-sm font-bold uppercase tracking-wider text-slate-400 mb-4 px-1">페르소나 선택</h2>
+      <h2 className="text-sm font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-4 px-1">페르소나 선택</h2>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
         {PERSONAS.map((persona) => (
           <button
             key={persona.id}
             onClick={() => onSelect(persona)}
-            className={`relative p-4 rounded-2xl border-2 transition-all duration-200 text-left group ${
+            className={`relative p-4 rounded-2xl border-2 transition-all duration-300 text-left group ${
               selectedId === persona.id
                 ? `${persona.color} shadow-lg scale-[1.02]`
-                : 'bg-white border-slate-100 hover:border-indigo-200 text-slate-600'
+                : 'bg-white dark:bg-zinc-900 border-zinc-100 dark:border-zinc-800 hover:border-indigo-200 dark:hover:border-indigo-900 text-zinc-600 dark:text-zinc-400'
             }`}
           >
             <div className="text-2xl mb-2 group-hover:scale-110 transition-transform">

@@ -2,14 +2,11 @@ import { Persona } from '../types';
 
 /**
  * Simulates an AI call for the purpose of this demo.
- * In a production app, this would call the OpenAI API or a backend endpoint.
  */
 export const transformSentence = async (text: string, persona: Persona): Promise<string> => {
   // Artificial delay to simulate network latency
   await new Promise(resolve => setTimeout(resolve, 1500));
 
-  // Basic mock logic to demonstrate "soul changing"
-  // In reality, this prompt would be sent to GPT-4
   const mockLogic: Record<string, (t: string) => string> = {
     scholar: (t) => `"${t}" ... 라니, 참으로 비통한 일이 아닐 수 없구료. 내 가르침을 명심하시오.`,
     genz: (t) => `오늘 ${t} 실화냐? 진짜 폼 미쳤다 ㄷㄷ 갓기 그 잡채임.`,
